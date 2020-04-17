@@ -1,4 +1,4 @@
-﻿@model Assignment_30b.Models.Insuree
+﻿@model IEnumerable<Assignment_30b.Models.Insuree>
 
 @{
     ViewBag.Title = "Index";
@@ -23,6 +23,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Quote)
         </th>
+        <th></th>
     </tr>
 
     @foreach (var item in Model)
