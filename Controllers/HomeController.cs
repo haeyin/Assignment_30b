@@ -17,7 +17,7 @@ namespace Assignment_30b.Controllers
         // GET: Insurees
         public ActionResult Index()
         {
-            return View(db.Insurees.ToList());
+            return View("Create");
         }
 
         // GET: Insurees/Details/5
