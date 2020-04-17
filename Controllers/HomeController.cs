@@ -12,11 +12,6 @@ namespace Assignment_30b.Controllers
 {
     public class HomeController : Controller
     {
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
-
         private CarInsuranceEntities db = new CarInsuranceEntities();
 
         // GET: Insurees
