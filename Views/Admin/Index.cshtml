@@ -1,17 +1,10 @@
-﻿
+﻿@model IEnumerable<Assignment_30b.Models.Insuree>
+
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Admin Page</h2>
-
-@model IEnumerable<Assignment_30b.Models.Insuree>
-
-@{
-    ViewBag.Title = "Index";
-}
-
-<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -30,7 +23,6 @@
         <th>
             @Html.DisplayNameFor(model => model.Quote)
         </th>
-        @*<th></th>*@
     </tr>
 
     @foreach (var item in Model)
