@@ -15,7 +15,7 @@ namespace Assignment_30b.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "";
+            ViewBag.Message = "Car Insurance Quotes";
 
             return View();
         }

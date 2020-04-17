@@ -10,7 +10,7 @@ using Assignment_30b.Models;
 
 namespace Assignment_30b.Controllers
 {
-    public class InsureesController : Controller
+    public class AdminController : Controller
     {
         private CarInsuranceEntities db = new CarInsuranceEntities();
 
@@ -52,7 +52,7 @@ namespace Assignment_30b.Controllers
             {
 
                 var InsureeAge = DateTime.Now.Year - insuree.DateOfBirth.Year;
-                
+
                 int monthlytotal = 50;
                 if (InsureeAge >= 18)
                 {
@@ -78,7 +78,7 @@ namespace Assignment_30b.Controllers
                     monthlytotal += 25;
                 }
 
-                var SpeedingFee = insuree.SpeedingTickets*10;
+                var SpeedingFee = insuree.SpeedingTickets * 10;
 
                 if (insuree.SpeedingTickets > 0)
                 {
@@ -128,7 +128,7 @@ namespace Assignment_30b.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,EmailAddress,DateOfBirth,CarYear,CarMake,CarModel,DUI,SpeedingTickets,CoverageType,Quote")] Insuree insuree)
+        public ActionResult Edit([Bind(Include = "FirstName,LastName,EmailAddress,Quote")] Insuree insuree)
         {
             if (ModelState.IsValid)
             {
